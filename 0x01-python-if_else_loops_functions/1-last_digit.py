@@ -14,4 +14,3 @@ elif last_d > 5:
     print("Last digit of {} is {}".format(number, last_d) + string1)
 else:
     print("Last digit of {} is {}".format(number, last_d) + string3)
-
