@@ -8,5 +8,3 @@ if __name__ == "__main__":
     for c in names:
         if c[:2] != "__":
             print(c)
-
-
