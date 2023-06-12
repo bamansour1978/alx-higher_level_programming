@@ -4,7 +4,7 @@ int is_palindrome(listint_t **head)
 	listint_t *curr = *head;
 	listint_t *pal = *head;
 	int count = 0, j = 0;
-	int i;
+	int i = 0;
 
 	if (!*head)
 		return (1);
@@ -17,8 +17,7 @@ int is_palindrome(listint_t **head)
 
 	curr = *head;
 
-	i = 0;
-	while (i <= count)
+	for (i = 1; i <= count; i++)
 	{
 		for (j = i; j <= count - i; j++)
 			pal = pal->next;
@@ -26,7 +25,6 @@ int is_palindrome(listint_t **head)
 			return (0);
 		curr = curr->next;
 		pal = curr;
-		i++;
 	}
 	return (1);
 }
