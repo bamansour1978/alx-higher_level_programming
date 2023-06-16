@@ -10,5 +10,5 @@ This repository contains programs written for the higher-level programming. The 
 
 ## Author :black_nib:
 
-* **BAMANSOUR ABDENNEBI** <[bdbaraban](https://github.com/bamansour1978)>
+* **BAMANSOUR ABDENNEBI** <[bamansour1978](https://github.com/bamansour1978)>
 
