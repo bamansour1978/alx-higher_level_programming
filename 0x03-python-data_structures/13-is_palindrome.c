@@ -1,4 +1,14 @@
 #include "lists.h"
+
+/**
+ * is_palindrome - a function in C that checks if a singly
+ * linked list is a palindrome.
+ *
+ * @head: double pointer
+ *
+ * Return: 1 or NULL
+ */
+
 int is_palindrome(listint_t **head)
 {
 	listint_t *curr = *head;
