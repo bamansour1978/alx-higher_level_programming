@@ -1,0 +1,1 @@
+            print("{}".format(value), end="")
