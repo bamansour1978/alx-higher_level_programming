@@ -2,12 +2,11 @@
 
 def safe_print_list(my_list=[], x=0):
     count = 0
-    for index in range(x):
+    for valor in my_list[:x]:
         try:
-            value = my_list[index]
-            print("{}".format(value), end="")
+            print("{}".format(valor), end="")
             count += 1
-        except IndexError:
-            print()
+        except IndexError as error:
+           print()
     print()
     return count
