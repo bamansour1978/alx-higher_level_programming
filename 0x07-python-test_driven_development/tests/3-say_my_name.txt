@@ -1,0 +1,21 @@
+Python 3.8.10 (default, May 26 2023, 14:05:08) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+>>> say_my_name(True)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/user/alx/_python/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 5, in say_my_name
+    raise TypeError("first_name must be a string")
+TypeError: first_name must be a string
+
+>>> say_my_name("True", 444)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/home/user/alx/_python/alx-higher_level_programming/0x07-python-test_driven_development/3-say_my_name.py", line 7, in say_my_name
+    raise TabError("last_name must be a string")
+TabError: last_name must be a string
+
+SyntaxError: unmatched ')'
+>>> say_my_name("BAMANSOUR", "Abdennebi")
+My name is BAMANSOUR Abdennebi
