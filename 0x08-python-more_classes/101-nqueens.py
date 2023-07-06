@@ -25,7 +25,7 @@ def init_bord(n):
 
 def bord_depcop(bord):
     """Return a depcop of a chessbord."""
-    if type(bord) is not list:
+    if isinstance(bord, list):
         return list(map(bord_depcop, bord))
     return (bord)
 
