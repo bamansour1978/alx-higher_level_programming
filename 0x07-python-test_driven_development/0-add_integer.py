@@ -3,7 +3,7 @@
 """A function that adds 2 integers."""
 
 
-def add_integer(a, b=89):
+def add_integer(a, b=98):
     """ Return integer
     args:
     a : first number to sum up with default value of '89'
