@@ -1,0 +1,15 @@
+# 1-my_list.txt
+
+MyList = __import__('1-my_list').MyList
+
+>>> list = MyList()
+>>> list = MyList([11, 22, 33])
+>>> print(list)
+[11, 22, 33]
+
+>>> list = MyList()
+>>> list.append("Bam")
+>>> list.append("Alx")
+>>> list.append("Africa")
+>>> print(list)
+['Bam', 'Alx', 'Africa']
