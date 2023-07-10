@@ -1,18 +1,17 @@
 # 1-my_list.txt
+# Brennan D Baraban <375@holbertonschool.com>
 
-MyList = __import__('1-my_list').MyList
+=======================
+How to Use 1-my_list.py
+=======================
 
->>> list = MyList()
->>> list = MyList([11, 22, 33])
->>> print(list)
-[11, 22, 33]
+This module defines a class ``MyList`` that inherits from ``list``.
 
->>> list = MyList()
->>> list.append("Bam")
->>> list.append("Alx")
->>> list.append("Africa")
->>> print(list)
-['Bam', 'Alx', 'Africa']
+Instantiation
+=============
+
+``MyList`` can be instantiated with no arguments, which will return
+an empty list:
 
 ::
 
