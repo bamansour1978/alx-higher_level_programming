@@ -34,7 +34,7 @@ if __name__ == "__main__":
             li = li.split()
 
             try:
-                size += int(l[-1])
+                size += int(li[-1])
             except (IndexError, ValueError):
                 pass
 
