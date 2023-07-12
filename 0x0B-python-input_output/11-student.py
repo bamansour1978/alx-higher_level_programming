@@ -24,6 +24,7 @@ class Student:
                 all(type(element) == str for element in attrs)):
             return {ky: getattr(self, ky) for ky in attrs if hasattr(self, ky)}
         return (self.__dict__)
+
     def reload_from_json(self, json):
         """Replace all attributes of Student.
 
