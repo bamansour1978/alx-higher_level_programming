@@ -14,6 +14,7 @@ def print_stats(size, status_codes):
     for k in sorted(status_codes):
         print("{}: {}".format(k, status_codes[k]))
 
+
 if __name__ == "__main__":
     import sys
 
@@ -23,14 +24,14 @@ if __name__ == "__main__":
     counter = 0
 
     try:
-        for l in sys.stdin:
+        for li in sys.stdin:
             if counter == 10:
                 print_stats(size, status_codes)
                 counter = 1
             else:
                 counter += 1
 
-            l = l.split()
+            li = li.split()
 
             try:
                 size += int(l[-1])
@@ -38,11 +39,11 @@ if __name__ == "__main__":
                 pass
 
             try:
-                if l[-2] in valid_codes:
-                    if status_codes.get(l[-2], -1) == -1:
-                        status_codes[l[-2]] = 1
+                if li[-2] in valid_codes:
+                    if status_codes.get(li[-2], -1) == -1:
+                        status_codes[li[-2]] = 1
                     else:
-                        status_codes[l[-2]] += 1
+                        status_codes[li[-2]] += 1
             except IndexError:
                 pass
 
