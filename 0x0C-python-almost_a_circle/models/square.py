@@ -52,7 +52,7 @@ class Square(Rectangle):
                 elif b == 2:
                     self.x = argument
                 elif b == 3:
-                    self.y = argument    
+                    self.y = argument
                 b += 1
 
         elif kwargs and len(kwargs) != 0:
