@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 """states models
 """
 if __name__ == "__main__":
@@ -7,24 +5,23 @@ if __name__ == "__main__":
     import sys
 
     db_host = "localhost"
-    db_user = sys.argv[1]  # "your_username"
-    db_password = sys.argv[2]  # "your_password"
-    db_name = sys.argv[3]  # "your_database_name"
+    db_user = sys.argv[1]  # "username"
+    db_password = sys.argv[2]  # "password"
+    db_name = sys.argv[3]  # "atabase_name"
     port = 3306
-    state_name = sys.argv[4]  # "your_database_name"
-    query = "SELECT * FROM states WHERE name LIKE BINARY %s ORDER BY id ASC"
-    params = (state_name,)
+    state_name = sys.argv[4]  # "database_name"
+    query = "SELECT * FROM states WHERE name LIKE BINARY\
+ '{}' ORDER BY id ASC".format(state_name)
     db = MySQLdb.connect(
         host=db_host, user=db_user, passwd=db_password, db=db_name, port=port
     )
-    cursor = db.cursor()
+    c = db.cursor()
 
-    cursor.execute(query, params)
-    rows = cursor.fetchall()
+    c.execute(query)
+    rows = c.fetchall()
 
-    for row in rows:
-        print(row)
+    for r in rows:
+        print(r)
 
-    cursor.close()
+    c.close()
     db.close()
-    
