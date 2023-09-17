@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+
 """states models
 """
 if __name__ == "__main__":
