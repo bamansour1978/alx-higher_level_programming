@@ -4,4 +4,4 @@
 #+ The size must be displayed in bytes
 #+ You have to use curl
 
-curl -s -w '%{size_download}\n' -o /dev/null "$1"
+curl -s "$1" | wc -c
