@@ -1,16 +1,13 @@
 #!/usr/bin/node
 const request = require('request');
-request(process.argv[2], function (error, response, body) {
-  if (!error) {
-    const todos = JSON.parse(body);
-    let completed = {};
-    todos.forEach((todo) => {
-      if (todo.completed && completed[todo.userId] === undefined) {
-        completed[todo.userId] = 1;
-      } else if (todo.completed) {
-        completed[todo.userId] += 1;
+const url = process.argv[2];
+request(url, { json: true }, (err, res, body) => {
+    if (err) console.log(err);
+    const reslt = {};
+    for (const task of body) {
+      if (task.completed) {
+        reslt[task.userId] = (reslt[task.userId] || 0) + 1;
       }
-    });
-    console.log(completed);
-  }
-});
+    }
+    console.log(reslt);
+  });
