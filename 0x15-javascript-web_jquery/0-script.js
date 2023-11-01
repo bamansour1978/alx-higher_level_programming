@@ -1,0 +1,1 @@
+document.querySelector('HEADER').getElementsByClassName.color = '#FF0000';
